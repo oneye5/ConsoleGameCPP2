@@ -396,6 +396,22 @@ int main()
 		}
 		//especials
 	};
+	static class Upgrades
+	{ //costs
+	public:
+		int healthLevel = 0;
+		int damageLevel = 0;
+		int fireRateLevel = 0;
+
+		vector<int> healthCost{ 1000,2000 };
+		vector<int> healthIncrease{ 50,100 }; // set, not additive, eg. lvl 2 is not 150, IS 100
+
+		vector<int> damageCost{ 1500,4000 };
+		vector<int> bulletTypes{ 0,3 };
+
+		vector<int> fireRateCost{ 1000 , 3000 };
+		vector<float> fireRateReduction{ 0.8,0.6 };
+	}upgrades;
 	static class GameManager
 	{
 #pragma region menuVars
@@ -424,6 +440,7 @@ int main()
 		vector<Bullet> bullets;
 		vector<Screen::Pixel> pixels;
 		vector<Hostile> hostiles;
+
 #pragma endregion
 #pragma region gameVoids
 
@@ -646,16 +663,7 @@ int main()
 		}
 #pragma endregion
 #pragma region Menu stuff
-		class Upgrades
-		{ //costs
-			vector<int> healthCost{ 1000,2000 };
-			vector<int> healthIncrease{ 50,100 }; // set, not additive, eg. lvl 2 is not 150, IS 100
 
-			vector<int> damageCost{ 1500,4000 };
-			vector<int> bulletTypes{ 0,3 };
-
-			vector<int> fireRateCost{ 1000 }
-		};
 		class variableText
 		{
 		public:
@@ -886,6 +894,27 @@ int main()
 			{
 				switch (pressed)
 				{
+				case 0:
+					if (igc > upgrades.healthCost[upgrades.healthLevel])
+					{
+						igc -= upgrades.healthCost[upgrades.healthLevel];
+						upgrades.healthLevel++;
+					}
+					break;
+				case 2:
+					if (igc > upgrades.damageCost[upgrades.damageLevel])
+					{
+						igc -= upgrades.damageCost[upgrades.damageLevel];
+						upgrades.damageLevel++;
+					}
+					break;
+				case 4:
+					if (igc > upgrades.fireRateCost[upgrades.fireRateLevel])
+					{
+						igc -= upgrades.fireRateCost[upgrades.fireRateLevel];
+						upgrades.fireRateLevel++;
+					}
+					break;
 				case 7: // play button
 					startGame();
 					break;
