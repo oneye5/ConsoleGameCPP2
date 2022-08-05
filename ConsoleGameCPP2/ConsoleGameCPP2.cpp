@@ -15,6 +15,7 @@ using std::vector;
 using std::string;
 int main()
 {
+
 	enum HostileType
 	{
 		WeakNormal,
@@ -23,10 +24,11 @@ int main()
 	enum BulletType
 	{
 		zeroLevelPlayerBullet,
-		WeakHostileBullet,
-		MidHostileBullet,
 		oneLevelPlayerBullet,
 		twoLevelPlayerBullet,
+
+		WeakHostileBullet,
+		MidHostileBullet,
 	};
 	static class Screen
 	{
@@ -175,17 +177,18 @@ int main()
 	};
 	class Player
 	{
-	public:
 
+	public:
 		int xPos = 10;
 		int yPos = 10;
 
-		int maxHealth = 100;
+		int baseHealth = 100;
+		int baseReload = 5;
 		BulletType bulletType = zeroLevelPlayerBullet;
 
 		int health;
 
-		int reloadTime = 4; //EVERYTHING MESURED IN FRAMES
+		int reloadTime; //EVERYTHING MESURED IN FRAMES
 		int timeTillShoot = reloadTime;
 
 		vector<Bullet> bulletsSpawed;
@@ -399,6 +402,7 @@ int main()
 	static class Upgrades
 	{ //costs
 	public:
+
 		int healthLevel = 0;
 		int damageLevel = 0;
 		int fireRateLevel = 0;
@@ -424,9 +428,10 @@ int main()
 		int BlinkLeft = -1;
 		int SelectedButton = -1;
 		bool buttonHeld = false;
+	public:
+		string postOutput = "";
 #pragma endregion
 #pragma region gameVars
-	public:
 
 
 		bool inMenu = true;
@@ -578,18 +583,18 @@ int main()
 
 
 			}
-			if (playtime == 260)
+			if (playtime == 280)
 			{
 
 				spawnHostile(12, 15, WeakNormal);
 				spawnHostile(4, 15, WeakNormal);
 			}
-			if (playtime == 300)
+			if (playtime == 340)
 			{
 
 				spawnHostile(8, 15, WeakNormal);
 			}
-			if (playtime == 360)
+			if (playtime == 390)
 			{
 				spawnHostile(8, 15, MidNormal);
 			}
@@ -607,7 +612,7 @@ int main()
 				}
 			}
 
-		}
+		} // main thingy for running game
 		void PrintHealthbar()
 		{
 			string health = "----------";
@@ -624,10 +629,12 @@ int main()
 		}
 		void startGame()
 		{
+			igcBeforePlay = igc;
 			playtime = 0;
 			inMenu = 0;
 			bullets = vector<Bullet>();
 			hostiles = vector<Hostile>();
+			applyUpgrades();
 
 		}
 		void startMainMenu()
@@ -661,9 +668,25 @@ int main()
 			screen.PrintScreen(animPixels);
 			Sleep(4000);
 		}
+		void applyUpgrades()
+		{
+			player.health = player.baseHealth;
+			player.reloadTime = player.baseReload;
+			if (upgrades.healthLevel != 0)
+			{
+				player.health += upgrades.healthIncrease[upgrades.healthLevel - 1];
+			}
+
+			player.bulletType = BulletType(upgrades.damageLevel);
+
+			if (upgrades.fireRateLevel != 0)
+			{
+				player.reloadTime -= upgrades.fireRateReduction[upgrades.fireRateLevel - 1];
+			}
+		}
+
 #pragma endregion
 #pragma region Menu stuff
-
 		class variableText
 		{
 		public:
@@ -799,8 +822,8 @@ int main()
 
 
 			variableTexts.push_back(variableText(std::to_string(igc), 12, 10)); //cash
-			variableTexts.push_back(variableText(std::to_string(player.maxHealth), 0, 14)); // health bar
-			variableTexts.push_back(variableText(std::to_string(player.maxHealth), 0, 12)); // damage bar
+			variableTexts.push_back(variableText(std::to_string(player.baseHealth), 0, 14)); // health bar
+			variableTexts.push_back(variableText(std::to_string(player.baseHealth), 0, 12)); // damage bar
 			variableTexts.push_back(variableText(std::to_string((int)(((double)player.reloadTime / (double)20) * (double)600)), 0, 10)); // damage bar
 
 			buttons.push_back(buttonText(6, 14, "+", 6, 2, 6, 1)); // 0
@@ -884,9 +907,75 @@ int main()
 					}
 				}
 			}//blinks & prints
-			std::cout << "\n blinkleft then time till : " << BlinkLeft << " " << TimeTillBlink;
+			vector<Screen::Pixel> costs = showCosts();
+			for (int i = 0; i < costs.size(); i++)
+			{
+				screen.push_back(costs[i]);
+			}
+			std::cout << "\n guh: " << costs.size();
 			pixels = screen;
-			std::cout << " \n SELECTED BUTTON :" << SelectedButton;
+		}
+		vector<Screen::Pixel> showCosts()
+		{
+			string output = "COST: ";
+			int cost = -1;
+			switch (SelectedButton)
+			{
+			case 0:
+				cost = upgrades.healthCost[upgrades.healthLevel];
+				break;
+			case 2:
+				cost = upgrades.damageCost[upgrades.damageLevel];
+				break;
+			case 4:
+				cost = upgrades.fireRateCost[upgrades.fireRateLevel];
+				break;
+			case 1:
+				if (upgrades.healthLevel != 0)
+				{
+					cost = -upgrades.healthCost[upgrades.healthLevel - 1];
+				}
+				else
+				{
+					cost = 0;
+				}
+				break;
+			case 3:
+				if (upgrades.healthLevel != 0)
+				{
+					cost = -upgrades.damageCost[upgrades.damageLevel - 1];
+				}
+				else
+				{
+					cost = 0;
+				}
+				break;
+			case 5:
+				if (upgrades.healthLevel != 0)
+				{
+					cost = -upgrades.fireRateCost[upgrades.fireRateLevel - 1];
+				}
+				else
+				{
+					cost = 0;
+				}
+				break;
+			}
+			if (cost == -1)
+				return vector<Screen::Pixel>();
+
+			string strCost = std::to_string(cost);
+			for (int i = 0; i < strCost.size(); i++)
+			{
+				output.push_back(strCost[i]);
+			}
+
+			vector<Screen::Pixel> pixelOutput;
+			for (int i = 0; i < output.size(); i++)
+			{
+				pixelOutput.push_back(Screen::Pixel(0 + i, 8, output[i]));
+			}
+			return pixelOutput;
 		}
 		void buttonFunctionality(int pressed, int menu = 0)
 		{
@@ -1011,18 +1100,19 @@ int main()
 			{
 				gameManager.MainMenuLoop();
 				screen.PrintScreen(gameManager.pixels);
+
 			}
 		}
 		//============================================================================================== GAMELOOP ===========================================================
 		static void start()
 		{
-			gameManager.player.health = gameManager.player.maxHealth;
+
 		}
 
 
 	}program;
 
-	gameManager.player = Player();
+
 	gameManager.bullets = vector<Bullet>();
 	const auto targetFrameTime = std::chrono::milliseconds(50); //50 = 1 seccond / 20fps 
 	program.start();
