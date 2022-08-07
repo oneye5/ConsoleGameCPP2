@@ -256,7 +256,7 @@ int main()
 			{
 				//SHOTTTTTTTTTTTT
 				timeTillShoot = reloadTime;
-				const Bullet& bullet = Bullet(xPos, yPos, 1.0);
+				const Bullet& bullet = Bullet(xPos, yPos, 1.0, bulletType);
 				bulletsSpawed = vector<Bullet>{ bullet };
 			}
 		}
@@ -427,14 +427,14 @@ int main()
 		int bulletLevel = 0;
 		int fireRateLevel = 0;
 
-		vector<int> healthCost{ 1000,2000 };
-		vector<int> healthIncrease{ 50,100 }; // set, not additive, eg. lvl 2 is not 150, IS 100
+		vector<int> healthCost{ 1000,2000,3000,6000 };
+		vector<int> healthIncrease{ 50,100,150,200 }; // set, not additive, eg. lvl 2 is not 150, IS 100
 
 		vector<int> damageCost{ 1500,4000,5000 };
 		vector<int> bulletTypes{ 1,2,3 };
 
-		vector<int> fireRateCost{ 1000 , 2000 ,4000 };
-		vector<float> fireRateReduction{ 1,2,3 };
+		vector<int> fireRateCost{ 1000 , 2000 ,4000,8000 };
+		vector<float> fireRateReduction{ 1,2,3 ,4 };
 	}upgrades;
 	static class GameManager
 	{
@@ -455,7 +455,7 @@ int main()
 
 
 		bool inMenu = true;
-		int level = 1;
+		int level = 1; // gamelevel
 		int igc = 99999; //MONEY
 		int igcBeforePlay;
 
@@ -587,38 +587,48 @@ int main()
 		void SpawnHostiles()
 		{
 		check:
-			if (playtime == 0)
-				spawnHostile(8, 15, WeakNormal);
-			if (playtime == 80)
+			switch (level)
 			{
-				spawnHostile(12, 15, WeakNormal);
-				spawnHostile(4, 15, WeakNormal);
-
-			}
-			if (playtime == 220)
+			case 1:
 			{
-				spawnHostile(15, 15, WeakNormal);
-				spawnHostile(1, 15, WeakNormal);
+				if (playtime == 0)
+					spawnHostile(8, 15, WeakNormal);
+				if (playtime == 80)
+				{
+					spawnHostile(12, 15, WeakNormal);
+					spawnHostile(4, 15, WeakNormal);
+
+				}
+				if (playtime == 220)
+				{
+					spawnHostile(15, 15, WeakNormal);
+					spawnHostile(1, 15, WeakNormal);
 
 
 
+				}
+				if (playtime == 280)
+				{
+
+					spawnHostile(12, 15, WeakNormal);
+					spawnHostile(4, 15, WeakNormal);
+				}
+				if (playtime == 340)
+				{
+
+					spawnHostile(8, 15, WeakNormal);
+				}
+				if (playtime == 390)
+				{
+					spawnHostile(8, 15, MidNormal);
+				}
+				break;
 			}
-			if (playtime == 280)
+			case 2:
 			{
-
-				spawnHostile(12, 15, WeakNormal);
-				spawnHostile(4, 15, WeakNormal);
+				break;
 			}
-			if (playtime == 340)
-			{
-
-				spawnHostile(8, 15, WeakNormal);
 			}
-			if (playtime == 390)
-			{
-				spawnHostile(8, 15, MidNormal);
-			}
-
 
 			playtime++;
 			if (hostiles.size() == 0)
@@ -629,6 +639,7 @@ int main()
 				{
 					inMenu = true;
 					level++;
+					levelCompleteScreen();
 				}
 			}
 
@@ -704,7 +715,48 @@ int main()
 				player.reloadTime -= upgrades.fireRateReduction[upgrades.fireRateLevel - 1];
 			}
 		}
+		void levelCompleteScreen()
+		{
+			pixels.clear();
+			string gain = std::to_string(igc - igcBeforePlay);
+			string gameLevel = std::to_string(level);
+			vector<Screen::Pixel> animPixels
+			{
+				Screen::Pixel(4,6,'Y'),
+				 Screen::Pixel(5,6,'O'),
+				 Screen::Pixel(6,6,'U'),
+				 Screen::Pixel(8,6,'W'),
+				 Screen::Pixel(9,6,'I'),
+				 Screen::Pixel(10,6,'N'),
 
+								 Screen::Pixel(4,5,'L'),
+									 Screen::Pixel(5,5,'V'),
+										 Screen::Pixel(6,5,'L'),
+											 Screen::Pixel(7,5,':'),
+
+				 Screen::Pixel(3,4,'+'),
+				 Screen::Pixel(4 + gain.size(),4,'$'),
+			};
+
+			for (int i = 0; i < gain.size(); i++)
+			{
+				animPixels.push_back(Screen::Pixel(4 + i, 4, gain[i]));
+			}
+			for (int i = 0; i < gameLevel.size(); i++)
+			{
+				animPixels.push_back(Screen::Pixel(8 + i, 5, gameLevel[i]));
+			}
+			screen.PrintScreen(animPixels);
+			Sleep(4000);
+		}
+		void ingameHotkeys()
+		{
+			if (GetKeyState(VK_ESCAPE) < 0)
+			{
+
+			}
+
+		}
 #pragma endregion
 #pragma region Menu stuff
 		class variableText
