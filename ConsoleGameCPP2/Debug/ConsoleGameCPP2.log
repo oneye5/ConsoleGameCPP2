@@ -1,69 +1,64 @@
 ﻿  ConsoleGameCPP2.cpp
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(118,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(119,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(272,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(273,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(306,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(306,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(312,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(312,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(313,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(313,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(314,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(314,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(321,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(321,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(322,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(322,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(323,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(323,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(292,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(293,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(326,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(326,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(332,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(332,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(333,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(333,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(334,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(334,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(334,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(340,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(340,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(341,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(341,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(342,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(342,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(349,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(349,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(350,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(350,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(351,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(351,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(382,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(382,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(385,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(385,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(417,45): warning C4305: 'initializing': truncation from 'double' to '_Ty'
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(341,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(341,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(342,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(342,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(343,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(343,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(354,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(354,21): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(360,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(360,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(361,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(361,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(362,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(362,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(369,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(369,23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(370,25): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(370,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(371,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(371,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(402,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(402,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(405,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(405,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(474,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(489,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(522,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(526,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(532,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(537,1): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(557,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(684,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(704,1): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(454,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(469,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(502,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(506,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(512,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(517,1): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(537,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(664,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(684,1): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
-          with
-          [
-              _Ty=float
-          ]
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(854,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(859,25): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(866,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(877,28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(885,28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(894,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(904,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(911,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(968,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(974,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1074,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(356): warning C4715: '`main'::`2'::Hostile::getPixels': not all control paths return a value
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(737): warning C4715: '`main'::`2'::GameManager::buttonText::newSelected': not all control paths return a value
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(874,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(879,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(886,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(897,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(905,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(914,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(924,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(931,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(988,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(994,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1094,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(376): warning C4715: '`main'::`2'::Hostile::getPixels': not all control paths return a value
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(757): warning C4715: '`main'::`2'::GameManager::buttonText::newSelected': not all control paths return a value
   ConsoleGameCPP2.vcxproj -> C:\Users\user\source\repos\ConsoleGameCPP2\Debug\ConsoleGameCPP2.exe

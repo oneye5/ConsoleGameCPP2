@@ -126,6 +126,16 @@ int main()
 				peirce = 0;
 				playerBullet = true;
 				return;
+			case oneLevelPlayerBullet:
+				damage = 50;
+				peirce = 1;
+				playerBullet = true;
+				return;
+			case twoLevelPlayerBullet:
+				damage = 70;
+				peirce = 2;
+				playerBullet = true;
+				return;
 			case WeakHostileBullet:
 				playerBullet = false;
 				damage = 10;
@@ -149,7 +159,17 @@ int main()
 			case zeroLevelPlayerBullet:
 				return vector<Screen::Pixel>
 				{
+					Screen::Pixel((int)round(x), (int)round(y), '*')
+				};
+			case oneLevelPlayerBullet:
+				return vector<Screen::Pixel>
+				{
 					Screen::Pixel((int)round(x), (int)round(y), '^')
+				};
+			case twoLevelPlayerBullet:
+				return vector<Screen::Pixel>
+				{
+					Screen::Pixel((int)round(x), (int)round(y), '|')
 				};
 			case MidHostileBullet:
 				return vector<Screen::Pixel>
@@ -184,7 +204,7 @@ int main()
 
 		int baseHealth = 100;
 		int baseReload = 5;
-		BulletType bulletType = zeroLevelPlayerBullet;
+		BulletType bulletType;
 
 		int health;
 
@@ -404,17 +424,17 @@ int main()
 	public:
 
 		int healthLevel = 0;
-		int damageLevel = 0;
+		int bulletLevel = 0;
 		int fireRateLevel = 0;
 
 		vector<int> healthCost{ 1000,2000 };
 		vector<int> healthIncrease{ 50,100 }; // set, not additive, eg. lvl 2 is not 150, IS 100
 
-		vector<int> damageCost{ 1500,4000 };
-		vector<int> bulletTypes{ 0,3 };
+		vector<int> damageCost{ 1500,4000,5000 };
+		vector<int> bulletTypes{ 1,2,3 };
 
-		vector<int> fireRateCost{ 1000 , 3000 };
-		vector<float> fireRateReduction{ 0.8,0.6 };
+		vector<int> fireRateCost{ 1000 , 2000 ,4000 };
+		vector<float> fireRateReduction{ 1,2,3 };
 	}upgrades;
 	static class GameManager
 	{
@@ -436,7 +456,7 @@ int main()
 
 		bool inMenu = true;
 		int level = 1;
-		int igc = 0; //MONEY
+		int igc = 99999; //MONEY
 		int igcBeforePlay;
 
 		bool running = true;
@@ -677,7 +697,7 @@ int main()
 				player.health += upgrades.healthIncrease[upgrades.healthLevel - 1];
 			}
 
-			player.bulletType = BulletType(upgrades.damageLevel);
+			player.bulletType = BulletType(upgrades.bulletLevel);
 
 			if (upgrades.fireRateLevel != 0)
 			{
@@ -925,7 +945,7 @@ int main()
 				cost = upgrades.healthCost[upgrades.healthLevel];
 				break;
 			case 2:
-				cost = upgrades.damageCost[upgrades.damageLevel];
+				cost = upgrades.damageCost[upgrades.bulletLevel];
 				break;
 			case 4:
 				cost = upgrades.fireRateCost[upgrades.fireRateLevel];
@@ -943,7 +963,7 @@ int main()
 			case 3:
 				if (upgrades.healthLevel != 0)
 				{
-					cost = -upgrades.damageCost[upgrades.damageLevel - 1];
+					cost = -upgrades.damageCost[upgrades.bulletLevel - 1];
 				}
 				else
 				{
@@ -991,10 +1011,10 @@ int main()
 					}
 					break;
 				case 2:
-					if (igc > upgrades.damageCost[upgrades.damageLevel])
+					if (igc > upgrades.damageCost[upgrades.bulletLevel])
 					{
-						igc -= upgrades.damageCost[upgrades.damageLevel];
-						upgrades.damageLevel++;
+						igc -= upgrades.damageCost[upgrades.bulletLevel];
+						upgrades.bulletLevel++;
 					}
 					break;
 				case 4:
