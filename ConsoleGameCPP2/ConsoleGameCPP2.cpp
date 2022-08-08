@@ -1,5 +1,5 @@
-// ConsoleGameCPP2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+
+// I used this project to learn c++, i still need a lot more time with it but i feel like i know enough to do most things, although not in the cleanest most efficient ways.
 
 #include <iostream>
 #include <list>
@@ -19,7 +19,8 @@ int main()
 	enum HostileType
 	{
 		WeakNormal,
-		MidNormal
+		MidNormal,
+		StrongNormal
 	};
 	enum BulletType
 	{
@@ -136,6 +137,7 @@ int main()
 				peirce = 2;
 				playerBullet = true;
 				return;
+
 			case WeakHostileBullet:
 				playerBullet = false;
 				damage = 10;
@@ -284,6 +286,7 @@ int main()
 		int animRemaining;
 		int timeTillMove;
 		int moveTickTime;
+		int bulletType;
 		HostileAnimation anim;
 		HostileType type;
 		vector<Bullet> bulletsSpawed;
@@ -302,6 +305,7 @@ int main()
 				timeTillShoot = reloadTime;
 				moveTickTime = 30;
 				timeTillMove = moveTickTime;
+				bulletType = WeakHostileBullet;
 				return;
 			case MidNormal:
 				health = 200;
@@ -309,6 +313,16 @@ int main()
 				timeTillShoot = reloadTime;
 				moveTickTime = 50;
 				timeTillMove = moveTickTime;
+				bulletType = MidHostileBullet;
+				return;
+			case StrongNormal:
+				health = 200;
+				reloadTime = 5;
+				timeTillShoot = reloadTime;
+				moveTickTime = 60;
+				timeTillMove = moveTickTime;
+				bulletType = MidHostileBullet;
+				return;
 			}
 		}
 		Hostile() {};
@@ -371,6 +385,36 @@ int main()
 							Screen::Pixel(x + 1, y, '>')
 					};
 				}
+
+				}
+			case StrongNormal:
+				switch (anim)
+				{
+				case Spawn:
+					return
+						vector<Screen::Pixel>
+					{
+						Screen::Pixel(x, y, 'X'),
+					};
+				case Idle:
+					return
+						vector<Screen::Pixel>
+					{
+						Screen::Pixel(x - 1, y, '('),
+							Screen::Pixel(x, y, 'X'),
+							Screen::Pixel(x + 1, y, ')')
+					};
+				case Hit:
+				{
+					return
+						vector<Screen::Pixel>
+					{
+						Screen::Pixel(x - 1, y, '('),
+							Screen::Pixel(x, y, '#'),
+							Screen::Pixel(x + 1, y, ')')
+					};
+				}
+
 				}
 			}
 		}
@@ -399,10 +443,13 @@ int main()
 			switch (type)
 			{
 			case WeakNormal:
-				bulletsSpawed = { Bullet(x, y, -1, BulletType::WeakHostileBullet) };
+				bulletsSpawed = { Bullet(x, y, -1, BulletType(bulletType)) };
 				break;
 			case MidNormal:
-				bulletsSpawed = { Bullet(x, y, -1, BulletType::MidHostileBullet) };
+				bulletsSpawed = { Bullet(x, y, -1, BulletType(bulletType)) };
+				break;
+			case StrongNormal:
+				bulletsSpawed = { Bullet(x, y, -1, BulletType(bulletType)) };
 				break;
 			}
 
@@ -424,17 +471,17 @@ int main()
 	public:
 
 		int healthLevel = 0;
-		int bulletLevel = 0;
+		int damageLevel = 0;
 		int fireRateLevel = 0;
 
-		vector<int> healthCost{ 1000,2000,3000,6000 };
-		vector<int> healthIncrease{ 50,100,150,200 }; // set, not additive, eg. lvl 2 is not 150, IS 100
+		vector<int> healthCost{ 1000,2000,3000,4500,10000,15000,30000,40000,-1 };
+		vector<int> healthIncrease{ 50,100,150,200,300,500,750 ,1000 }; // set, not additive, eg. lvl 2 is not 150, IS 100
 
-		vector<int> damageCost{ 1500,4000,5000 };
-		vector<int> bulletTypes{ 1,2,3 };
+		vector<int> damageCost{ 1500,3000,5000,10000,-1 };
+		vector<int> bulletTypes{ 1,2,3 ,4 };
 
-		vector<int> fireRateCost{ 1000 , 2000 ,4000,8000 };
-		vector<float> fireRateReduction{ 1,2,3 ,4 };
+		vector<int> fireRateCost{ 1000 , 1500 ,4000,10000,50000,-1 };
+		vector<float> fireRateReduction{ 1,2,3 ,4,5 };
 	}upgrades;
 	static class GameManager
 	{
@@ -456,7 +503,7 @@ int main()
 
 		bool inMenu = true;
 		int level = 1; // gamelevel
-		int igc = 99999; //MONEY
+		int igc = 0; //MONEY
 		int igcBeforePlay;
 
 		bool running = true;
@@ -626,6 +673,39 @@ int main()
 			}
 			case 2:
 			{
+				if (playtime == 0)
+				{
+					spawnHostile(8, 14, WeakNormal);
+				}
+				if (playtime == 2)
+				{
+					spawnHostile(10, 15, WeakNormal);
+					spawnHostile(6, 15, WeakNormal);
+				}
+				if (playtime == 3)
+				{
+					spawnHostile(12, 16, WeakNormal);
+					spawnHostile(4, 16, WeakNormal);
+				}
+				if (playtime == 160)
+				{
+					spawnHostile(10, 15, MidNormal);
+					spawnHostile(6, 15, MidNormal);
+				}
+				if (playtime == 300)
+				{
+					spawnHostile(8, 12, StrongNormal);
+				}
+				if (playtime == 302)
+				{
+					spawnHostile(10, 15, WeakNormal);
+					spawnHostile(6, 15, WeakNormal);
+				}
+				if (playtime == 304)
+				{
+					spawnHostile(12, 16, WeakNormal);
+					spawnHostile(4, 16, WeakNormal);
+				}
 				break;
 			}
 			}
@@ -716,7 +796,7 @@ int main()
 				player.health += upgrades.healthIncrease[upgrades.healthLevel - 1];
 			}
 
-			player.bulletType = BulletType(upgrades.bulletLevel);
+			player.bulletType = BulletType(upgrades.damageLevel);
 
 			if (upgrades.fireRateLevel != 0)
 			{
@@ -1005,7 +1085,7 @@ int main()
 				cost = upgrades.healthCost[upgrades.healthLevel];
 				break;
 			case 2:
-				cost = upgrades.damageCost[upgrades.bulletLevel];
+				cost = upgrades.damageCost[upgrades.damageLevel];
 				break;
 			case 4:
 				cost = upgrades.fireRateCost[upgrades.fireRateLevel];
@@ -1023,7 +1103,7 @@ int main()
 			case 3:
 				if (upgrades.healthLevel != 0)
 				{
-					cost = -upgrades.damageCost[upgrades.bulletLevel - 1];
+					cost = -upgrades.damageCost[upgrades.damageLevel - 1];
 				}
 				else
 				{
@@ -1066,20 +1146,26 @@ int main()
 				case 0:
 					if (igc > upgrades.healthCost[upgrades.healthLevel])
 					{
+						if (upgrades.healthCost[upgrades.healthLevel == -1])
+							return;
 						igc -= upgrades.healthCost[upgrades.healthLevel];
 						upgrades.healthLevel++;
 					}
 					break;
 				case 2:
-					if (igc > upgrades.damageCost[upgrades.bulletLevel])
+					if (igc > upgrades.damageCost[upgrades.damageLevel])
 					{
-						igc -= upgrades.damageCost[upgrades.bulletLevel];
-						upgrades.bulletLevel++;
+						if (upgrades.damageCost[upgrades.damageLevel] == -1)
+							return;
+						igc -= upgrades.damageCost[upgrades.damageLevel];
+						upgrades.damageLevel++;
 					}
 					break;
 				case 4:
 					if (igc > upgrades.fireRateCost[upgrades.fireRateLevel])
 					{
+						if (upgrades.fireRateCost[upgrades.fireRateLevel] == -1)
+							return;
 						igc -= upgrades.fireRateCost[upgrades.fireRateLevel];
 						upgrades.fireRateLevel++;
 					}
@@ -1193,6 +1279,10 @@ int main()
 	}program;
 
 
+	std::cout << "wasd to move, space to select, esc to go back to the main menu\n\ntype anything then enter to continue\n";
+	string throwaway;
+	std::cin >> throwaway;
+
 	gameManager.bullets = vector<Bullet>();
 	const auto targetFrameTime = std::chrono::milliseconds(50); //50 = 1 seccond / 20fps 
 	program.start();
@@ -1210,7 +1300,8 @@ int main()
 		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
 		auto timeToSleep = std::chrono::duration_cast<std::chrono::milliseconds>(targetFrameTime - duration);
 		std::this_thread::sleep_for(std::chrono::milliseconds(timeToSleep));
-		std::cout << "working frame time: " << duration.count() << " sleeping frame time: " << timeToSleep.count() << " target frame time: " << targetFrameTime.count();
+		std::cout << "working frame time: " << duration.count() << "\n"
+			<< " sleeping frame time: " << timeToSleep.count();
 	} while (gameManager.running);
 	std::cout << "\n \n================== end of program ===============================";
 }
