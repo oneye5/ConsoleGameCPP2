@@ -42,23 +42,25 @@ C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(5
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(532,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(537,1): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(557,1): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(684,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(704,1): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(703,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(723,1): warning C4244: '-=': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(874,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(879,25): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(886,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(897,28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(905,28): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(914,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(924,26): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(931,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(988,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(994,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1094,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(749,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(753,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(934,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(939,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(946,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(957,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(965,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(974,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(984,26): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(991,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1048,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1054,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(1154,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(376): warning C4715: '`main'::`2'::Hostile::getPixels': not all control paths return a value
-C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(757): warning C4715: '`main'::`2'::GameManager::buttonText::newSelected': not all control paths return a value
+C:\Users\user\source\repos\ConsoleGameCPP2\ConsoleGameCPP2\ConsoleGameCPP2.cpp(817): warning C4715: '`main'::`2'::GameManager::buttonText::newSelected': not all control paths return a value
   ConsoleGameCPP2.vcxproj -> C:\Users\user\source\repos\ConsoleGameCPP2\Debug\ConsoleGameCPP2.exe

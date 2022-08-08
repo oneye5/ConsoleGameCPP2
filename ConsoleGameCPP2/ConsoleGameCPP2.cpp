@@ -646,17 +646,25 @@ int main()
 		} // main thingy for running game
 		void PrintHealthbar()
 		{
-			string health = "----------";
+			int maxHealth;
+			if (upgrades.healthLevel != 0)
+				maxHealth = upgrades.healthIncrease[upgrades.healthLevel - 1] + player.baseHealth;
+			else
+			{
+				maxHealth = player.baseHealth;
+			}
+			string OutHealth = "----------";
 			if (player.health <= 0)
 				return;
-			for (int i = 0; i < (int)round(player.health / 10); i++)
+			int health = player.health;
+			int maxI = (int)(((float)health / (float)maxHealth) * 10.0);
+			std::cout << maxI << " max :" << maxHealth;
+			for (int i = 0; i < maxI; i++)
 			{
-				if (i > 10)
-					break;
-				health[i] = '=';
-
+				//if ()
+				OutHealth[i] = '=';
 			}
-			std::cout << "\n{" << health << "}";
+			std::cout << "\n{" << OutHealth << "}";
 		}
 		void startGame()
 		{
@@ -753,7 +761,7 @@ int main()
 		{
 			if (GetKeyState(VK_ESCAPE) < 0)
 			{
-
+				startMainMenu();
 			}
 
 		}
@@ -1167,12 +1175,12 @@ int main()
 				gameManager.getAllPixels();
 				screen.PrintScreen(gameManager.pixels);
 				gameManager.PrintHealthbar();
+				gameManager.ingameHotkeys();
 			}
 			else
 			{
 				gameManager.MainMenuLoop();
 				screen.PrintScreen(gameManager.pixels);
-
 			}
 		}
 		//============================================================================================== GAMELOOP ===========================================================
